@@ -6,10 +6,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 console.log(galleryItems);
 
-var lightbox = new SimpleLightbox('.gallery a', {
-  /* options */
-});
-
 const listImg = document.querySelector('.gallery');
 
 const createItems = galleryItems
@@ -24,6 +20,10 @@ const createItems = galleryItems
 
 listImg.innerHTML = createItems;
 
+var instance = new SimpleLightbox('.gallery a', {
+  /* options */
+});
+
 // const imgPreview = event => {
 //   event.preventDefault();
 
@@ -35,4 +35,4 @@ listImg.innerHTML = createItems;
 //   instance.show();
 // };
 
-// listImg.addEventListener('click', imgPreview);
+listImg.addEventListener('click', instance);
