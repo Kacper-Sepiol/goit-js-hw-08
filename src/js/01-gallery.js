@@ -24,15 +24,15 @@ const createItems = galleryItems
 
 listImg.innerHTML = createItems;
 
-const imgPreview = event => {
-  event.preventDefault();
+// const imgPreview = event => {
+//   event.preventDefault();
 
-  if (event.target.classList.contains('gallery')) return;
-  const source = event.target.dataset.source;
+//   if (event.target.classList.contains('gallery')) return;
+//   const source = event.target.dataset.source;
 
-  const instance = basicLightbox.create(`<img src="${source}">`);
+//   const instance = basicLightbox.create(`<img src="${source}">`);
 
-  instance.show();
-};
+//   instance.show();
+// };
 
-listImg.addEventListener('click', imgPreview);
+// listImg.addEventListener('click', imgPreview);
