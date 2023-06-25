@@ -20,9 +20,7 @@ const createItems = galleryItems
 
 listImg.innerHTML = createItems;
 
-var instance = new SimpleLightbox('.gallery a', {
-  /* options */
-});
+var instance = new SimpleLightbox('.gallery a');
 
 // const imgPreview = event => {
 //   event.preventDefault();
