@@ -1,6 +1,7 @@
 'use strict';
 
 import Vimeo from '@vimeo/player';
+import throttle from 'lodash.throttle';
 
 const video = document.querySelector('#vimeo-player');
 
