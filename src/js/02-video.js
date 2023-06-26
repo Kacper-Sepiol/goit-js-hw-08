@@ -25,3 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
     player.setCurrentTime(currentTime);
   }
 });
+
+player.on(
+  'timeupdate',
+  throttle(event => {
+    const currentTime = event.seconds;
+    localStorage.setItem('videoplayer-current-time', currentTime);
+  }, 1000)
+);
