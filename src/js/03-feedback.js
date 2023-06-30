@@ -32,13 +32,14 @@ window.addEventListener('load', loadStateForm);
 form.addEventListener('submit', event => {
   event.preventDefault();
 
+  const formState = {
+    email: emailInput.value,
+    message: messageInput.value,
+  };
+
   localStorage.removeItem('feedback-form-state');
   emailInput.value = '';
   messageInput.value = '';
 
-  const formState = {
-    email: '',
-    message: '',
-  };
   console.log('wyslano formularz:', formState);
 });
